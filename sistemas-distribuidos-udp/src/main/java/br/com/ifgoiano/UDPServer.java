@@ -4,9 +4,9 @@ import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
-import java.time.DateTimeException;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class UDPServer {
     private static final int PORT = 12345;
@@ -27,9 +27,9 @@ public class UDPServer {
                 String response;
 
                 try {
-                    ZonedDateTime zdt = ZonedDateTime.now(ZoneId.of(timezone));
-                    response = zdt.toLocalDateTime().toString();
-                } catch (DateTimeException e) {
+                    ZonedDateTime dateTime = ZonedDateTime.now(ZoneId.of(timezone));
+                    response = dateTime.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss z"));
+                } catch (Exception e) {
                     response = "Fuso horário inválido!";
                 }
 

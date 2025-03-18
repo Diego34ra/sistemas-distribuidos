@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ab1cc10d-ca91-4c6c-b911-86516daed15e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/sistemas-distribuidos-tcp-threads/src/main/java/br/edu/ifgoiano/ClientHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistemas-distribuidos-tcp-threads/src/main/java/br/edu/ifgoiano/TimezoneClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistemas-distribuidos-tcp-threads/src/main/java/br/edu/ifgoiano/TimezoneServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistemas-distribuidos-tcp/src/main/java/br/edu/ifgoiano/TimeServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistemas-distribuidos-tcp/src/main/java/br/edu/ifgoiano/TimezoneTCPClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sistemas-distribuidos-udp/src/main/java/br/com/ifgoiano/UDPServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemas-distribuidos-udp/src/main/java/br/com/ifgoiano/UDPServer.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2uUHKQNoZxxJzWBDDZ2OQ0VZQJm" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.TimeServer.executor": "Run",
+    "Application.TimezoneClient.executor": "Run",
+    "Application.TimezoneServer.executor": "Run",
+    "Application.TimezoneTCPClient.executor": "Run",
+    "Application.UDPClient.executor": "Run",
+    "Application.UDPServer.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "jdk.selected.JAVA_MODULE": "openjdk-23",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/2022101202010058/Documents/GitHub/sistemas-distribuidos/sistemas-distribuidos-tcp-threads",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.35287356"
+  }
+}]]></component>
+  <component name="RunManager" selected="Application.TimezoneClient (1)">
+    <configuration name="TCPClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.edu.ifgoiano.tcpThreads.TCPClient" />
+      <module name="sistemas-distribuidos-tcp-threads" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.edu.ifgoiano.tcp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TCPServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.edu.ifgoiano.tcpThreads.TCPServer" />
+      <module name="sistemas-distribuidos-tcp-threads" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.edu.ifgoiano.tcp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TimezoneClient (1)" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="br.edu.ifgoiano.tcpThreads.TCPClient" />
+      <module name="sistemas-distribuidos-tcp-threads" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.edu.ifgoiano.tcp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TimezoneClient (2)" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="br.edu.ifgoiano.tcpThreads.TCPClient" />
+      <module name="sistemas-distribuidos-tcp-threads" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.edu.ifgoiano.tcp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UDPClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.com.ifgoiano.UDPClient" />
+      <module name="sistemas-distribuidos-udp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.ifgoiano.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="br.edu.ifgoiano.tcp.TCPClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.edu.ifgoiano.tcp.TCPClient" />
+      <module name="sistemas-distribuidos-tcp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.edu.ifgoiano.tcp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="br.edu.ifgoiano.tcp.TCPServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.edu.ifgoiano.tcp.TCPServer" />
+      <module name="sistemas-distribuidos-tcp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.edu.ifgoiano.tcp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.TimezoneClient (1)" />
+      <item itemvalue="Application.TimezoneClient (2)" />
+      <item itemvalue="Application.br.edu.ifgoiano.tcp.TCPServer" />
+      <item itemvalue="Application.TCPClient" />
+      <item itemvalue="Application.TCPServer" />
+      <item itemvalue="Application.br.edu.ifgoiano.tcp.TCPClient" />
+      <item itemvalue="Application.UDPClient" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.TCPServer" />
+        <item itemvalue="Application.br.edu.ifgoiano.tcp.TCPClient" />
+        <item itemvalue="Application.br.edu.ifgoiano.tcp.TCPServer" />
+        <item itemvalue="Application.TCPClient" />
+        <item itemvalue="Application.UDPClient" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ab1cc10d-ca91-4c6c-b911-86516daed15e" name="Changes" comment="" />
+      <created>1742296168815</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1742296168815</updated>
+    </task>
+    <servers />
+  </component>
+</project>

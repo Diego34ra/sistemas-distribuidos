@@ -5,13 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ab1cc10d-ca91-4c6c-b911-86516daed15e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/sistemas-distribuidos-tcp-threads/src/main/java/br/edu/ifgoiano/ClientHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sistemas-distribuidos-tcp-threads/src/main/java/br/edu/ifgoiano/TimezoneClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sistemas-distribuidos-tcp-threads/src/main/java/br/edu/ifgoiano/TimezoneServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sistemas-distribuidos-tcp/src/main/java/br/edu/ifgoiano/TimeServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sistemas-distribuidos-tcp/src/main/java/br/edu/ifgoiano/TimezoneTCPClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistemas-distribuidos-udp/src/main/java/br/com/ifgoiano/UDPServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemas-distribuidos-udp/src/main/java/br/com/ifgoiano/UDPServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistemas-distribuidos-websocket/src/main/java/br/edu/ifgoiano/websocket/config/WebSocketConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistemas-distribuidos-websocket/src/main/java/br/edu/ifgoiano/websocket/controller/TemperaturaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistemas-distribuidos-websocket/src/main/java/br/edu/ifgoiano/websocket/controller/response/TemperaturaResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +28,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -38,24 +41,30 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.TCPServer.executor": "Run",
     "Application.TimeServer.executor": "Run",
+    "Application.TimezoneClient (1).executor": "Run",
+    "Application.TimezoneClient (2).executor": "Run",
     "Application.TimezoneClient.executor": "Run",
     "Application.TimezoneServer.executor": "Run",
     "Application.TimezoneTCPClient.executor": "Run",
     "Application.UDPClient.executor": "Run",
     "Application.UDPServer.executor": "Run",
+    "Application.WebsocketApplication.executor": "Run",
+    "Application.br.edu.ifgoiano.tcp.TCPClient.executor": "Run",
+    "Application.br.edu.ifgoiano.tcp.TCPServer.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "jdk.selected.JAVA_MODULE": "openjdk-23",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/2022101202010058/Documents/GitHub/sistemas-distribuidos/sistemas-distribuidos-tcp-threads",
+    "last_opened_file_path": "C:/Users/2022101202010058/Documents/GitHub/sistemas-distribuidos/sistemas-distribuidos-websocket",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.35287356"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.TimezoneClient (1)">
+  <component name="RunManager" selected="Application.WebsocketApplication">
     <configuration name="TCPClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.edu.ifgoiano.tcpThreads.TCPClient" />
       <module name="sistemas-distribuidos-tcp-threads" />
@@ -108,12 +117,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UDPClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="br.com.ifgoiano.UDPClient" />
-      <module name="sistemas-distribuidos-udp" />
+    <configuration name="WebsocketApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.edu.ifgoiano.websocket.WebsocketApplication" />
+      <module name="websocket" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="br.com.ifgoiano.*" />
+          <option name="PATTERN" value="br.edu.ifgoiano.websocket.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -150,19 +159,19 @@
     <list>
       <item itemvalue="Application.TimezoneClient (1)" />
       <item itemvalue="Application.TimezoneClient (2)" />
-      <item itemvalue="Application.br.edu.ifgoiano.tcp.TCPServer" />
+      <item itemvalue="Application.WebsocketApplication" />
       <item itemvalue="Application.TCPClient" />
       <item itemvalue="Application.TCPServer" />
       <item itemvalue="Application.br.edu.ifgoiano.tcp.TCPClient" />
-      <item itemvalue="Application.UDPClient" />
+      <item itemvalue="Application.br.edu.ifgoiano.tcp.TCPServer" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.WebsocketApplication" />
         <item itemvalue="Application.TCPServer" />
         <item itemvalue="Application.br.edu.ifgoiano.tcp.TCPClient" />
         <item itemvalue="Application.br.edu.ifgoiano.tcp.TCPServer" />
         <item itemvalue="Application.TCPClient" />
-        <item itemvalue="Application.UDPClient" />
       </list>
     </recent_temporary>
   </component>

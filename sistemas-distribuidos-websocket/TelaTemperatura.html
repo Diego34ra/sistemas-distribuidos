@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Monitoramento de Temperatura</title>
+    <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1.5.1/dist/sockjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/stompjs@2.3.3/lib/stomp.min.js"></script>
+</head>
+<body>
+    <h1>Temperatura Atual</h1>
+    <ul id="temperaturaList"></ul>
+
+    <script>
+        var socket = new SockJS('http://localhost:8080/temperatura'); // Usa SockJS ao invés de WebSocket puro
+        var stompClient = Stomp.over(socket);
+
+        stompClient.connect({}, function(frame) {
+        console.log("Conectado ao WebSocket!");
+        stompClient.subscribe('/topic/temperatura', function(message) {
+            console.log("Nova temperatura: " + message.body);
+
+            // Certifique-se de que a mensagem está sendo parseada corretamente
+            var data = JSON.parse(message.body); // Assumindo que você está enviando um JSON
+            displayTemperature(data); // Exibe na tela
+        });
+    });
+
+    function displayTemperature(data) {
+        // Checa se a estrutura dos dados está correta
+        console.log(data); // Log para verificar os dados recebidos
+
+        var temperatureList = document.getElementById('temperaturaList');
+        var listItem = document.createElement('li');
+
+        // Adiciona a mensagem formatada na tela
+        listItem.textContent = `Localização: ${data.location}, Temperatura: ${data.temperature}°C, Descrição: ${data.description}`;
+        temperatureList.appendChild(listItem);
+    }
+
+    </script>
+</body>
+</html>

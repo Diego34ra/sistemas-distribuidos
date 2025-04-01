@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: websocket
+openweather:
+  api:
+    key: bfad56f6701459cc1f0fb4a549b768df
+
+

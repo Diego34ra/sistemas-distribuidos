@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/sistemas-distribuidos-tcp/pom.xml" />
         <option value="$PROJECT_DIR$/sistemas-distribuidos-tcp-threads/pom.xml" />
         <option value="$PROJECT_DIR$/sistemas-distribuidos-websocket/pom.xml" />
+        <option value="$PROJECT_DIR$/sistemas-distribuidos-relogio/pom.xml" />
       </list>
     </option>
     <option name="workspaceImportForciblyTurnedOn" value="true" />

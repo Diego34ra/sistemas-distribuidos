@@ -15,7 +15,7 @@ public class TemperaturaController {
     private final SimpMessagingTemplate messagingTemplate;
     private final RestTemplate restTemplate = new RestTemplate();
 
-    private final String[] locations = {"New York", "London", "Paris", "Tokyo", "Berlin", "Sydney", "Rio de Janeiro", "Moscow", "Delhi", "Cape Town"};
+    private final String[] locations = {"Caldas Novas", "London", "Paris", "Tokyo", "Berlin", "Sydney", "Rio de Janeiro", "Pires do Rio", "Orizona", "Cape Town"};
 
     @Value("${openweather.api.key}")
     private String apiKey;

@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="sistemas-distribuidos-tcp-threads" />
+        <module name="sistemas-distribuidos-relogio" />
         <module name="sistemas-distribuidos-tcp" />
         <module name="sistemas-distribuidos-udp" />
         <module name="websocket" />
@@ -15,6 +16,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="sistemas-distribuidos-relogio" options="-parameters" />
       <module name="websocket" options="-parameters" />
     </option>
   </component>

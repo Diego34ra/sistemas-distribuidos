@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: sistemas-distribuidos-gRPC-Client
+
+grpc:
+  server:
+    port: 9000
+
+  client:
+    weather:
+      address: static://localhost:9090
+      negotiationType: plaintext

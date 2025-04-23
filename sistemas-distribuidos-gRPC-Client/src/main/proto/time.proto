@@ -1,7 +1,7 @@
 syntax = "proto3";
 
 option java_multiple_files = true;
-option java_package = "br.edu.ifgoiano.grpc";
+option java_package = "br.edu.ifgoiano.grpc.client";
 option java_outer_classname = "WeatherServiceProto";
 
 service WeatherService {

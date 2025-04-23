@@ -1,5 +1,6 @@
-package br.edu.ifgoiano.grpc.servidor;
+package br.edu.ifgoiano.grpc.client;
 
+import br.edu.ifgoiano.grpc.client.dto.EstatisticasDTO;
 import net.devh.boot.grpc.client.inject.GrpcClient;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -40,9 +41,14 @@ public class WeatherController {
     }
 
     @GetMapping("/estatisticas")
-    public ResponseEntity<EstatisticasResponse> obterEstatisticas(@RequestParam String cidade) {
+    public ResponseEntity<EstatisticasDTO> obterEstatisticas(@RequestParam String cidade) {
         EstatisticasResponse res = grpcStub.estatisticasClimaticas(CidadeRequest.newBuilder().setNome(cidade).build());
-        return ResponseEntity.ok(res);
+        EstatisticasDTO dto = new EstatisticasDTO(
+                res.getMedia(),
+                res.getMinima(),
+                res.getMaxima()
+        );
+        return ResponseEntity.ok(dto);
     }
 }
 

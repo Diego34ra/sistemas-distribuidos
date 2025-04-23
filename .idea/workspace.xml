@@ -5,14 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ab1cc10d-ca91-4c6c-b911-86516daed15e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/sistemas-distribuidos-gRPC-Client/src/main/java/br/edu/ifgoiano/grpc/servidor/WeatherController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sistemas-distribuidos-gRPC-Client/src/main/proto/time.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sistemas-distribuidos-gRPC/src/main/java/br/edu/ifgoiano/grpc/servidor/WeatherServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sistemas-distribuidos-gRPC/src/main/proto/time.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistemas-distribuidos-gRPC-Client/src/main/java/br/edu/ifgoiano/grpc/client/dto/EstatisticasDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sistemas-distribuidos-gRPC-Client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sistemas-distribuidos-gRPC-Client/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sistemas-distribuidos-gRPC-Client/src/main/java/br/edu/ifgoiano/grpc/servidor/SistemasDistribuidosGRpcClientApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemas-distribuidos-gRPC-Client/src/main/java/br/edu/ifgoiano/grpc/client/SistemasDistribuidosGRpcClientApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sistemas-distribuidos-gRPC-Client/src/main/java/br/edu/ifgoiano/grpc/servidor/WeatherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemas-distribuidos-gRPC-Client/src/main/java/br/edu/ifgoiano/grpc/client/WeatherController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sistemas-distribuidos-gRPC-Client/src/main/proto/time.proto" beforeDir="false" afterPath="$PROJECT_DIR$/sistemas-distribuidos-gRPC-Client/src/main/proto/time.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sistemas-distribuidos-gRPC-Client/src/test/java/br/edu/ifgoiano/grpc/servidor/SistemasDistribuidosGRpcClientApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemas-distribuidos-gRPC-Client/src/test/java/br/edu/ifgoiano/grpc/client/SistemasDistribuidosGRpcClientApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sistemas-distribuidos-gRPC/src/main/java/br/edu/ifgoiano/grpc/servidor/SistemasDistribuidosGRpcApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemas-distribuidos-gRPC/src/main/java/br/edu/ifgoiano/grpc/client/SistemasDistribuidosGRpcApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sistemas-distribuidos-gRPC/src/main/java/br/edu/ifgoiano/grpc/servidor/WeatherServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemas-distribuidos-gRPC/src/main/java/br/edu/ifgoiano/grpc/client/WeatherServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sistemas-distribuidos-gRPC/src/test/java/br/edu/ifgoiano/grpc/servidor/SistemasDistribuidosGRpcApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemas-distribuidos-gRPC/src/test/java/br/edu/ifgoiano/grpc/client/SistemasDistribuidosGRpcApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,45 +49,45 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.ClientePollQueueWebSocket.executor": "Run",
-    "Application.SistemasDistribuidosGRpcApplication.executor": "Run",
-    "Application.SistemasDistribuidosGRpcClientApplication.executor": "Run",
-    "Application.SistemasDistribuidosRelogioApplication.executor": "Run",
-    "Application.TCPServer.executor": "Run",
-    "Application.TimeServer.executor": "Run",
-    "Application.TimezoneClient (1).executor": "Run",
-    "Application.TimezoneClient (2).executor": "Run",
-    "Application.TimezoneClient.executor": "Run",
-    "Application.TimezoneServer.executor": "Run",
-    "Application.TimezoneTCPClient.executor": "Run",
-    "Application.UDPClient.executor": "Run",
-    "Application.UDPServer.executor": "Run",
-    "Application.WebsocketApplication.executor": "Run",
-    "Application.br.edu.ifgoiano.grpc.servidor.SistemasDistribuidosGRpcClientApplication.executor": "Run",
-    "Application.br.edu.ifgoiano.tcp.TCPClient.executor": "Run",
-    "Application.br.edu.ifgoiano.tcp.TCPServer.executor": "Run",
-    "Maven.sistemas-distribuidos-gRPC [clean].executor": "Run",
-    "Maven.sistemas-distribuidos-gRPC [compile].executor": "Run",
-    "Maven.sistemas-distribuidos-gRPC [install].executor": "Run",
-    "Maven.sistemas-distribuidos-gRPC [package].executor": "Run",
-    "Maven.sistemas-distribuidos-gRPC [test].executor": "Run",
-    "Maven.sistemas-distribuidos-gRPC [verify].executor": "Run",
-    "Maven.sistemas-distribuidos-gRPC-Client [clean].executor": "Run",
-    "Maven.sistemas-distribuidos-gRPC-Client [install].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "jdk.selected.JAVA_MODULE": "openjdk-23",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/2022101202010058/Documents/GitHub/sistemas-distribuidos/sistemas-distribuidos-gRPC-Client/src/main",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.35287356",
-    "settings.editor.selected.configurable": "tools.buf"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.ClientePollQueueWebSocket.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SistemasDistribuidosGRpcApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SistemasDistribuidosGRpcClientApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SistemasDistribuidosRelogioApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.TCPServer.executor&quot;: &quot;Run&quot;,
+    &quot;Application.TimeServer.executor&quot;: &quot;Run&quot;,
+    &quot;Application.TimezoneClient (1).executor&quot;: &quot;Run&quot;,
+    &quot;Application.TimezoneClient (2).executor&quot;: &quot;Run&quot;,
+    &quot;Application.TimezoneClient.executor&quot;: &quot;Run&quot;,
+    &quot;Application.TimezoneServer.executor&quot;: &quot;Run&quot;,
+    &quot;Application.TimezoneTCPClient.executor&quot;: &quot;Run&quot;,
+    &quot;Application.UDPClient.executor&quot;: &quot;Run&quot;,
+    &quot;Application.UDPServer.executor&quot;: &quot;Run&quot;,
+    &quot;Application.WebsocketApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.br.edu.ifgoiano.grpc.servidor.SistemasDistribuidosGRpcClientApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.br.edu.ifgoiano.tcp.TCPClient.executor&quot;: &quot;Run&quot;,
+    &quot;Application.br.edu.ifgoiano.tcp.TCPServer.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.sistemas-distribuidos-gRPC [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.sistemas-distribuidos-gRPC [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.sistemas-distribuidos-gRPC [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.sistemas-distribuidos-gRPC [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.sistemas-distribuidos-gRPC [test].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.sistemas-distribuidos-gRPC [verify].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.sistemas-distribuidos-gRPC-Client [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.sistemas-distribuidos-gRPC-Client [install].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-23&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/2022101202010058/Documents/GitHub/sistemas-distribuidos/sistemas-distribuidos-gRPC-Client/src/main&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.35287356&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;tools.buf&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\2022101202010058\Documents\GitHub\sistemas-distribuidos\sistemas-distribuidos-gRPC-Client\src\main" />
@@ -106,11 +108,24 @@
       </method>
     </configuration>
     <configuration name="SistemasDistribuidosGRpcApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="br.edu.ifgoiano.grpc.servidor.SistemasDistribuidosGRpcApplication" />
+      <option name="MAIN_CLASS_NAME" value="br.edu.ifgoiano.grpc.client.SistemasDistribuidosGRpcApplication" />
       <module name="sistemas-distribuidos-gRPC" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="br.edu.ifgoiano.grpc.servidor.*" />
+          <option name="PATTERN" value="br.edu.ifgoiano.grpc.client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SistemasDistribuidosGRpcClientApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.edu.ifgoiano.grpc.client.SistemasDistribuidosGRpcClientApplication" />
+      <module name="sistemas-distribuidos-gRPC-Client" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.edu.ifgoiano.grpc.client.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -150,19 +165,6 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="br.edu.ifgoiano.tcp.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="br.edu.ifgoiano.grpc.servidor.SistemasDistribuidosGRpcClientApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="br.edu.ifgoiano.grpc.servidor.SistemasDistribuidosGRpcClientApplication" />
-      <module name="sistemas-distribuidos-gRPC-Client" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="br.edu.ifgoiano.grpc.servidor.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>

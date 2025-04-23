@@ -8,7 +8,7 @@
 		<version>3.4.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>br.edu.ifgoiano.grpc</groupId>
+	<groupId>br.edu.ifgoiano.grpc.client</groupId>
 	<artifactId>sistemas-distribuidos-gRPC-Client</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>sistemas-distribuidos-gRPC-Client</name>

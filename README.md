@@ -11,6 +11,6 @@ Os seguintes diretórios correspondem à tarefa sobre gRPC e Spring Boot:
 
 ### 👥 Autores
 
-- José Antonio R Souto
 - Diego Ribeiro Araujo
 - Flávio Diniz de Souza
+- José Antonio R Souto

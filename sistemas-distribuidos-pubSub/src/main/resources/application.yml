@@ -1,0 +1,245 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: sistema-distribuido-pedidos
+  rabbitmq:
+    host: shrimp.rmq.cloudamqp.com
+    port: 5671
+    virtual-host: pgjzjmrp
+    username: pgjzjmrp
+    password: HmAd0W3M6rkOccjMwceak4RGn1diNkWZ
+    ssl:
+      enabled: true
+  cloud:
+    function:
+      definition: processarPedido;eventoProcessado;auditoriaPedidos;notificacaoProcessado;eventoEntregue;transportarPedido
+    stream:
+      default-binder: rabbit-cloud
+      binders:
+        rabbit-cloud:
+          type: rabbit
+      rabbit:
+        bindings:
+          pedidosOutput-out-0:
+            producer:
+              declareExchange: true
+              exchangeType: direct
+              exchangeName: fila-processamento-pedidos
+              durable: true
+              routingKeyExpression: '""'  # Routing key vazia (obrigat�rio para direct exchange)
+          processarPedido-in-0:
+            consumer:
+              declareExchange: true
+              exchangeType: direct
+              exchangeName: fila-processamento-pedidos
+              queueNameGroupOnly: true
+              durable: true
+              bindQueue: true
+              bindingRoutingKey: ""  # Vincula com routing key vazia
+          eventoProcessado-out-0:
+            producer:
+              declareExchange: true
+              exchangeType: direct
+              exchangeName: fila-evento-processado
+              durable: true
+              routingKeyExpression: '""'  # Routing key vazia (obrigat�rio para direct exchange)
+          eventoProcessado-in-0:
+            consumer:
+              declareExchange: true
+              exchangeType: direct
+              exchangeName: fila-evento-processado
+              queueNameGroupOnly: true
+              durable: true
+              bindQueue: true
+              bindingRoutingKey: ""  # Vincula com routing key vazia
+          eventoEntregue-out-0:
+            producer:
+              declareExchange: true
+              exchangeType: direct
+              exchangeName: fila-evento-entregue
+              durable: true
+              routingKeyExpression: '""'  # Routing key vazia (obrigat�rio para direct exchange)
+          auditoriaPedidos-out-0:
+            producer:
+              declareExchange: true
+              exchangeType: direct
+              exchangeName: fila-auditoria-pedido
+              durable: true
+              routingKeyExpression: '""'  # Routing key vazia (obrigat�rio para direct exchange)
+          auditoriaPedidos-in-0:
+            consumer:
+              declareExchange: true
+              exchangeType: direct
+              exchangeName: fila-auditoria-pedido
+              queueNameGroupOnly: true
+              durable: true
+              bindQueue: true
+              bindingRoutingKey: ""  # Vincula com routing key vazia
+          notificacaoProcessado-out-0:
+            producer:
+              declareExchange: true
+              exchangeType: direct
+              exchangeName: fila-notificacao-processado
+              durable: true
+              routingKeyExpression: '""'  # Routing key vazia (obrigat�rio para direct exchange)
+          notificacaoProcessado-in-0:
+            consumer:
+              declareExchange: true
+              exchangeType: direct
+              exchangeName: fila-notificacao-processado
+              queueNameGroupOnly: true
+              durable: true
+              bindQueue: true
+              bindingRoutingKey: ""  # Vincula com routing key vazia
+          eventoEntregue-in-0:
+            consumer:
+              declareExchange: true
+              exchangeType: direct
+              exchangeName: fila-evento-entregue
+              queueNameGroupOnly: true
+              durable: true
+              bindQueue: true
+              bindingRoutingKey: ""  # Vincula com routing key vazia
+          transportarPedido-out-0:
+            producer:
+              declareExchange: true
+              exchangeType: direct
+              exchangeName: fila-transporte-pedidos
+              durable: true
+              routingKeyExpression: '""'  # Routing key vazia (obrigat�rio para direct exchange)
+          transportarPedido-in-0:
+            consumer:
+              declareExchange: true
+              exchangeType: direct
+              exchangeName: fila-transporte-pedidos
+              queueNameGroupOnly: true
+              durable: true
+              bindQueue: true
+              bindingRoutingKey: ""  # Vincula com routing key vazia
+      bindings:
+        pedidosOutput-out-0:
+          destination: fila-processamento-pedidos
+
+        processarPedido-in-0:
+          destination: fila-processamento-pedidos
+          group: grupo-processamento
+
+        eventoProcessado-out-0:
+          destination: fila-evento-processado
+
+        eventoProcessado-in-0:
+          destination: fila-evento-processado
+          group: grupo-eventoProcessado
+
+        auditoriaPedidos-out-0:
+          destination: fila-auditoria-pedido
+
+        auditoriaPedidos-in-0:
+          destination: fila-auditoria-pedido
+          group: grupo-auditoria
+
+        notificacaoProcessado-out-0:
+          destination: fila-notificacao-processado
+
+        notificacaoProcessado-in-0:
+          destination: fila-notificacao-processado
+          group: grupo-auditoria
+
+        eventoEntregue-out-0:
+          destination: fila-evento-entregue
+
+        eventoEntregue-in-0:
+          destination: fila-evento-entregue
+          group: grupo-eventoEntregue
+
+        transportarPedido-out-0:
+          destination: fila-transporte-pedidos
+
+        transportarPedido-in-0:
+          destination: fila-transporte-pedidos
+          group: grupo-transporte
+
+#server:
+#  port: 8080
+#
+#spring:
+#  application:
+#    name: sistema-pedidos
+#  rabbitmq:
+#    host: shrimp.rmq.cloudamqp.com
+#    port: 5671
+#    virtual-host: shsaqrnu
+#    username: shsaqrnu
+#    password: nXf_e9qtHzdXrq15uDyEI_oDkTqpmIF3
+#    ssl:
+#      enabled: true
+#  cloud:
+#    function:
+#      definition: processarPedido,transportarPedido,auditoriaPedidos,eventoProcessado,eventoEntregue
+#    stream:
+#      binders:
+#        rabbit-cloud:
+#          type: rabbit
+#      bindings:
+#        # --- Fluxo Principal ---
+#        pedidoInput-in-0:
+#          destination: fila-processamento-pedidos
+#          group: grupo-processamento
+#
+#        processarPedido-out-0:
+#          destination: fila-transporte-pedidos
+#
+#        transportarPedido-out-0:
+#          destination: eventos.pedidos
+#
+#        # --- Eventos ---
+#        eventoProcessado-in-0:
+#          destination: eventos.pedidos
+#          group: grupo-notificacao
+#          consumer:
+#            bindingRoutingKey: pedido.processado
+#
+#        eventoEntregue-in-0:
+#          destination: eventos.pedidos
+#          group: grupo-notificacao
+#          consumer:
+#            bindingRoutingKey: pedido.entregue
+#
+#        auditoria-in-0:
+#          destination: eventos.pedidos
+#          group: grupo-auditoria
+#          consumer:
+#            bindingRoutingKey: pedido.*
+#
+#      rabbit:
+#        bindings:
+#          # Fluxo Principal
+#          pedidoInput-in-0:
+#            consumer:
+#              exchangeType: direct
+#              durable: true
+#          processarPedido-out-0:
+#            producer:
+#              exchangeType: direct
+#              routingKeyExpression: '""'
+#          transportarPedido-out-0:
+#            producer:
+#              exchangeType: topic
+#              exchangeName: eventos.pedidos
+#              routingKeyExpression: '"pedido.entregue"'
+#
+#          # Eventos
+#          eventoProcessado-in-0:
+#            consumer:
+#              exchangeType: topic
+#              exchangeName: eventos.pedidos
+#          eventoEntregue-in-0:
+#            consumer:
+#              exchangeType: topic
+#              exchangeName: eventos.pedidos
+#          auditoria-in-0:
+#            consumer:
+#              exchangeType: topic
+#              exchangeName: eventos.pedidos

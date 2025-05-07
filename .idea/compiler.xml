@@ -10,9 +10,19 @@
         <module name="sistemas-distribuidos-tcp-threads" />
         <module name="sistemas-distribuidos-relogio" />
         <module name="sistemas-distribuidos-gRPC" />
+        <module name="sistemas-distribuidos-websocket" />
         <module name="websocket" />
         <module name="sistemas-distribuidos-tcp" />
         <module name="sistemas-distribuidos-udp" />
+      </profile>
+      <profile name="Annotation profile for sistemas-distribuidos-pubSub" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
+        </processorPath>
+        <module name="sistemas-distribuidos-pubSub" />
       </profile>
     </annotationProcessing>
   </component>
@@ -20,7 +30,9 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="sistemas-distribuidos-gRPC" options="-parameters" />
       <module name="sistemas-distribuidos-gRPC-Client" options="-parameters" />
+      <module name="sistemas-distribuidos-pubSub" options="-parameters" />
       <module name="sistemas-distribuidos-relogio" options="-parameters" />
+      <module name="sistemas-distribuidos-websocket" options="-parameters" />
       <module name="websocket" options="-parameters" />
     </option>
   </component>

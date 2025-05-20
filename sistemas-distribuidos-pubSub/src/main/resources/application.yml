@@ -7,9 +7,9 @@ spring:
   rabbitmq:
     host: shrimp.rmq.cloudamqp.com
     port: 5671
-    virtual-host: pgjzjmrp
-    username: pgjzjmrp
-    password: HmAd0W3M6rkOccjMwceak4RGn1diNkWZ
+    virtual-host: cyycvena
+    username: cyycvena
+    password: bNhsPL_GjI7F-MrdecOfXq7tQ5mpjvuf
     ssl:
       enabled: true
   cloud:

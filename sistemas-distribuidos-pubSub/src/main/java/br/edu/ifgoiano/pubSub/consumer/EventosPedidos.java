@@ -15,7 +15,6 @@ public class EventosPedidos {
         return pedido -> {
             System.out.println("Mensagem recebida (eventoProcessado): " + pedido);
             streamBridge.send("auditoriaPedidos-out-0", pedido);
-            streamBridge.send("notificacaoProcessado-out-0", pedido);
         };
     }
 
@@ -24,7 +23,6 @@ public class EventosPedidos {
         return pedido -> {
             System.out.println("Mensagem recebida (eventoEntregue): " + pedido);
             streamBridge.send("auditoriaPedidos-out-0", pedido);
-            streamBridge.send("notificacaoProcessado-out-0", pedido);
         };
     }
 }

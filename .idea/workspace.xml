@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ab1cc10d-ca91-4c6c-b911-86516daed15e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistemas-distribuidos-pubSub/src/main/java/br/edu/ifgoiano/pubSub/consumer/AuditoriaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemas-distribuidos-pubSub/src/main/java/br/edu/ifgoiano/pubSub/consumer/AuditoriaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistemas-distribuidos-pubSub/src/main/java/br/edu/ifgoiano/pubSub/consumer/EventosPedidos.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemas-distribuidos-pubSub/src/main/java/br/edu/ifgoiano/pubSub/consumer/EventosPedidos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistemas-distribuidos-pubSub/src/main/java/br/edu/ifgoiano/pubSub/service/PedidoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sistemas-distribuidos-pubSub/src/main/java/br/edu/ifgoiano/pubSub/controller/PedidoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemas-distribuidos-pubSub/src/main/java/br/edu/ifgoiano/pubSub/controller/PedidoController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +17,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -33,6 +32,9 @@
   &quot;associatedIndex&quot;: 6
 }</component>
   <component name="ProjectId" id="2uUHKQNoZxxJzWBDDZ2OQ0VZQJm" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -217,7 +219,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1742296168815</updated>
-      <workItem from="1747912693291" duration="6029000" />
+      <workItem from="1747912693291" duration="6890000" />
     </task>
     <servers />
   </component>

@@ -1,6 +1,7 @@
 package br.edu.ifgoiano.pubSub.controller;
 
 import br.edu.ifgoiano.pubSub.model.Pedido;
+import br.edu.ifgoiano.pubSub.service.PedidoService;
 import org.springframework.cloud.stream.function.StreamBridge;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -15,23 +16,16 @@ import org.springframework.web.bind.annotation.RestController;
 public class PedidoController {
 
     private final StreamBridge streamBridge;
+    private PedidoService pedidoService;
 
-    public PedidoController(StreamBridge streamBridge) {
+    public PedidoController(StreamBridge streamBridge,
+                            PedidoService pedidoService) {
         this.streamBridge = streamBridge;
+        this.pedidoService = pedidoService;
     }
 
     @PostMapping
     public ResponseEntity<String> criarPedido(@RequestBody Pedido pedido) {
-        boolean enviado = streamBridge.send(
-                "pedidosOutput-out-0",
-                MessageBuilder
-                        .withPayload(pedido)
-                        .setHeader("contentType", MediaType.APPLICATION_JSON_VALUE)
-                        .build()
-        );
-
-        return enviado
-                ? ResponseEntity.ok("Pedido enviado para processamento.")
-                : ResponseEntity.internalServerError().body("Erro ao enviar pedido.");
+        return pedidoService.criar(pedido);
     }
 }

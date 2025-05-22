@@ -99,3 +99,9 @@ Este projeto simula o ciclo de vida de um pedido em um sistema de e-commerce, ut
       │                          │ NotificacaoService│
       └─────────────────────────►│ ✔ Notifica Cliente│
                                  └───────────────────┘
+```
+
+## 📜 Observações Importantes
+
+- As filas e os bindings são definidos automaticamente via Spring Cloud Stream com as configurações no `application.yml`.
+- Cada evento gera logs no console, simulando os serviços de notificação e auditoria.

@@ -43,14 +43,15 @@ Este projeto simula o ciclo de vida de um pedido em um sistema de e-commerce, ut
 
 ## 🛠️ Como Funciona (Principais Componentes)
 
-| Componente            | Função                                                                                   |
-|-----------------------|------------------------------------------------------------------------------------------|
-| **PedidoController**  | Endpoint REST para criação de pedidos. Envia o pedido para a fila de processamento.      |
-| **ProcessadorPedidos**| Consome pedidos da fila de processamento, altera status para `PROCESSADO` e gera eventos.|
-| **TransportePedidos** | Consome pedidos da fila de transporte, altera status para `ENTREGUE` e gera evento.      |
-| **EventosPedidos**    | Dispara eventos de `pedido-processado` e `pedido-entregue` para o serviço de auditoria.  |
-| **AuditoriaService**  | Registra os eventos recebidos e notifica o cliente.                                      |
-| **NotificacaoService**| Recebe eventos de auditoria e realiza a notificação.                                     |
+| Componente              | Função                                                                                                           |
+|-------------------------|------------------------------------------------------------------------------------------------------------------|
+| **PedidoController**    | Camada REST. Recebe requisições HTTP e delega a lógica de negócio para o `PedidoService`.                       |
+| **PedidoService**       | Responsável pela lógica de criação de pedidos. Envia o pedido para a fila `fila-processamento-pedidos`.         |
+| **ProcessadorPedidos**  | Consome pedidos da fila de processamento. Altera o status para `PROCESSADO`. Gera o evento `pedido-processado` e encaminha para a fila de transporte (`fila-transporte-pedidos`). |
+| **TransportePedidos**   | Consome pedidos da fila de transporte. Altera o status para `ENTREGUE`. Gera o evento `pedido-entregue`.        |
+| **EventosPedidos**      | Responsável por encaminhar os eventos `pedido-processado` e `pedido-entregue` para o serviço de auditoria.      |
+| **AuditoriaService**    | Registra os eventos recebidos e, após a auditoria, envia notificações aos clientes.                             |
+| **NotificacaoService**  | Recebe os eventos de auditoria e realiza a notificação final para o cliente.    
 
 ## 🔥 Fluxo Visual (Simplificado)
 

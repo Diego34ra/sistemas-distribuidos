@@ -12,9 +12,10 @@
         <option value="$PROJECT_DIR$/sistemas-distribuidos-gRPC/pom.xml" />
         <option value="$PROJECT_DIR$/sistemas-distribuidos-gRPC-Client/pom.xml" />
         <option value="$PROJECT_DIR$/sistemas-distribuidos-pubSub/pom.xml" />
+        <option value="$PROJECT_DIR$/sistemas-distribuidos-replicacao/pom.xml" />
+        <option value="$PROJECT_DIR$/sistemas-distribuidos-principal/pom.xml" />
       </list>
     </option>
-    <option name="workspaceImportForciblyTurnedOn" value="true" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="corretto-21" project-jdk-type="JavaSDK" />
 </project>

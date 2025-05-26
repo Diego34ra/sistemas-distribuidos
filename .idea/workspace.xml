@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ab1cc10d-ca91-4c6c-b911-86516daed15e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/sistemas-distribuidos-pubSub/src/main/java/br/edu/ifgoiano/pubSub/service/PedidoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistemas-distribuidos-pubSub/src/main/java/br/edu/ifgoiano/pubSub/controller/PedidoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sistemas-distribuidos-pubSub/src/main/java/br/edu/ifgoiano/pubSub/controller/PedidoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistemas-distribuidos-principal/src/main/java/br/edu/ifgoiano/principal/sistemas_distribuidos_principal/config/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistemas-distribuidos-principal/src/main/java/br/edu/ifgoiano/principal/sistemas_distribuidos_principal/controller/DataController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistemas-distribuidos-principal/src/main/java/br/edu/ifgoiano/principal/sistemas_distribuidos_principal/model/Usuario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistemas-distribuidos-replicacao/src/main/java/br/edu/ifgoiano/replicacao/sistemas_distribuidos_replicacao/controller/ReplicaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sistemas-distribuidos-replicacao/src/main/java/br/edu/ifgoiano/replicacao/sistemas_distribuidos_replicacao/model/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,8 +51,10 @@
     "Application.ClientePollQueueWebSocket.executor": "Run",
     "Application.SistemasDistribuidosGRpcApplication.executor": "Run",
     "Application.SistemasDistribuidosGRpcClientApplication.executor": "Run",
+    "Application.SistemasDistribuidosPrincipalApplication.executor": "Run",
     "Application.SistemasDistribuidosPubSubApplication.executor": "Run",
     "Application.SistemasDistribuidosRelogioApplication.executor": "Run",
+    "Application.SistemasDistribuidosReplicacaoApplication.executor": "Run",
     "Application.TCPServer.executor": "Run",
     "Application.TimeServer.executor": "Run",
     "Application.TimezoneClient (1).executor": "Run",
@@ -55,6 +64,8 @@
     "Application.TimezoneTCPClient.executor": "Run",
     "Application.UDPClient.executor": "Run",
     "Application.UDPServer.executor": "Run",
+    "Application.Unnamed (1).executor": "Run",
+    "Application.Unnamed.executor": "Run",
     "Application.WebsocketApplication.executor": "Run",
     "Application.br.edu.ifgoiano.grpc.servidor.SistemasDistribuidosGRpcClientApplication.executor": "Run",
     "Application.br.edu.ifgoiano.tcp.TCPClient.executor": "Run",
@@ -74,7 +85,7 @@
     "git-widget-placeholder": "main",
     "jdk.selected.JAVA_MODULE": "openjdk-23",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/2022101202010058/Documents/GitHub/sistemas-distribuidos/sistemas-distribuidos-pubSub",
+    "last_opened_file_path": "C:/Users/diego/Documents/GitHub/sistemas-distribuidos/sistemas-distribuidos-replicacao/src/main/java/br/edu/ifgoiano/replicacao/sistemas_distribuidos_replicacao",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
@@ -87,13 +98,14 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\diego\Documents\GitHub\sistemas-distribuidos\sistemas-distribuidos-replicacao\src\main\java\br\edu\ifgoiano\replicacao\sistemas_distribuidos_replicacao" />
       <recent name="C:\Users\2022101202010058\Documents\GitHub\sistemas-distribuidos\sistemas-distribuidos-gRPC-Client\src\main" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="br.edu.ifgoiano.pubSub.core.usecase" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SistemasDistribuidosPubSubApplication">
+  <component name="RunManager" selected="Application.Unnamed">
     <configuration name="ClientePollQueueWebSocket" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.edu.ifgoiano.relogio.client.ClientePollQueueWebSocket" />
       <module name="sistemas-distribuidos-relogio" />
@@ -120,12 +132,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SistemasDistribuidosGRpcClientApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="br.edu.ifgoiano.grpc.client.SistemasDistribuidosGRpcClientApplication" />
-      <module name="sistemas-distribuidos-gRPC-Client" />
+    <configuration name="SistemasDistribuidosPrincipalApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.edu.ifgoiano.principal.sistemas_distribuidos_principal.SistemasDistribuidosPrincipalApplication" />
+      <module name="sistemas-distribuidos-principal" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="br.edu.ifgoiano.grpc.client.*" />
+          <option name="PATTERN" value="br.edu.ifgoiano.principal.sistemas_distribuidos_principal.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -146,12 +158,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SistemasDistribuidosRelogioApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="br.edu.ifgoiano.relogio.SistemasDistribuidosRelogioApplication" />
-      <module name="sistemas-distribuidos-relogio" />
+    <configuration name="SistemasDistribuidosReplicacaoApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.edu.ifgoiano.replicacao.sistemas_distribuidos_replicacao.SistemasDistribuidosReplicacaoApplication" />
+      <module name="sistemas-distribuidos-replicacao" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="br.edu.ifgoiano.relogio.*" />
+          <option name="PATTERN" value="br.edu.ifgoiano.replicacao.sistemas_distribuidos_replicacao.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -185,21 +197,40 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Unnamed (1)" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.edu.ifgoiano.replicacao.sistemas_distribuidos_replicacao.SistemasDistribuidosReplicacaoApplication" />
+      <module name="sistemas-distribuidos-replicacao" />
+      <option name="PROGRAM_PARAMETERS" value="--server.port=8082" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.edu.ifgoiano.replicacao.sistemas_distribuidos_replicacao.SistemasDistribuidosReplicacaoApplication" />
+      <module name="sistemas-distribuidos-replicacao" />
+      <option name="PROGRAM_PARAMETERS" value="--server.port=8081" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.TimezoneClient (1)" />
+      <item itemvalue="Application.Unnamed" />
+      <item itemvalue="Application.Unnamed (1)" />
       <item itemvalue="Application.TimezoneClient (2)" />
-      <item itemvalue="Application.SistemasDistribuidosGRpcClientApplication" />
+      <item itemvalue="Application.SistemasDistribuidosPrincipalApplication" />
+      <item itemvalue="Application.SistemasDistribuidosReplicacaoApplication" />
       <item itemvalue="Application.SistemasDistribuidosPubSubApplication" />
       <item itemvalue="Application.SistemasDistribuidosGRpcApplication" />
       <item itemvalue="Application.ClientePollQueueWebSocket" />
-      <item itemvalue="Application.SistemasDistribuidosRelogioApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SistemasDistribuidosPrincipalApplication" />
+        <item itemvalue="Application.SistemasDistribuidosReplicacaoApplication" />
         <item itemvalue="Application.SistemasDistribuidosPubSubApplication" />
         <item itemvalue="Application.SistemasDistribuidosGRpcApplication" />
         <item itemvalue="Application.ClientePollQueueWebSocket" />
-        <item itemvalue="Application.SistemasDistribuidosRelogioApplication" />
       </list>
     </recent_temporary>
   </component>

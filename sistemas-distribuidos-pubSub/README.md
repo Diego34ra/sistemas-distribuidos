@@ -45,62 +45,14 @@ Este projeto simula o ciclo de vida de um pedido em um sistema de e-commerce, ut
 
 | Componente              | Função                                                                                                           |
 |-------------------------|------------------------------------------------------------------------------------------------------------------|
-| **PedidoController**    | Camada REST. Recebe requisições HTTP e delega a lógica de negócio para o `PedidoService`.                       |
-| **PedidoService**       | Responsável pela lógica de criação de pedidos. Envia o pedido para a fila `fila-processamento-pedidos`.         |
+| **PedidoController**    | Camada REST. Recebe requisições HTTP e delega a lógica de negócio para o `PedidoService`.                        |
+| **PedidoService**       | Responsável pela lógica de criação de pedidos. Envia o pedido para a fila `fila-processamento-pedidos`.          |
 | **ProcessadorPedidos**  | Consome pedidos da fila de processamento. Altera o status para `PROCESSADO`. Gera o evento `pedido-processado` e encaminha para a fila de transporte (`fila-transporte-pedidos`). |
 | **TransportePedidos**   | Consome pedidos da fila de transporte. Altera o status para `ENTREGUE`. Gera o evento `pedido-entregue`.        |
 | **EventosPedidos**      | Responsável por encaminhar os eventos `pedido-processado` e `pedido-entregue` para o serviço de auditoria.      |
 | **AuditoriaService**    | Registra os eventos recebidos e, após a auditoria, envia notificações aos clientes.                             |
 | **NotificacaoService**  | Recebe os eventos de auditoria e realiza a notificação final para o cliente.    
 
-## 🔥 Fluxo Visual (Simplificado)
-
-```plaintext
-┌────────────┐
-│   Cliente   │
-└─────┬──────┘
-      │  (REST API)
-      ▼
-┌──────────────────────┐
-│   PedidoController    │
-│ Envia para fila:      │
-│ fila-processamento    │
-└─────┬────────────────┘
-      │  (Mensagem)
-      ▼
-┌──────────────────────┐
-│  ProcessadorPedidos   │
-│ ✔ Processa Pedido     │
-│ ✔ Altera status:      │
-│   CRIADO → PROCESSADO │
-│ ✔ Publica eventos:    │
-│   - pedido-processado │
-│ ✔ Envia para fila:    │
-│   fila-transporte     │
-└─────┬────────────────┘
-      │
-      ├───────────────► Evento: pedido-processado
-      │                                 │
-      │                                 ▼
-      │                        ┌──────────────────┐
-      │                        │  EventosPedidos   │
-      │                        │ ✔ Publica evento  │
-      │                        │   para Auditoria  │
-      │                        └────────┬─────────┘
-      │                                 │
-      ▼                                 ▼
-┌──────────────────────┐       ┌──────────────────┐
-│  TransportePedidos    │       │  AuditoriaService │
-│ ✔ Entrega Pedido      │       │ ✔ Registra evento │
-│ ✔ Altera status:      │       │ ✔ Dispara Notificação │
-│   PROCESSADO → ENTREGUE│      └────────┬─────────┘
-│ ✔ Publica evento:     │                │
-│   pedido-entregue     │                ▼
-└─────┬────────────────┘         ┌──────────────────┐
-      │                          │ NotificacaoService│
-      └─────────────────────────►│ ✔ Notifica Cliente│
-                                 └───────────────────┘
-```
 
 ## 📜 Observações Importantes
 
